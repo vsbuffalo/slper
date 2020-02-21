@@ -9,6 +9,14 @@ This relies on using certain Eidos code blocks to record simulation in a
 specific format, and then provides the Python code to process this output
 efficiently.
 
+## Installation
+
+```
+$ git clone https://github.com/vsbuffalo/slper
+$ cd slper
+$ python -m pip install .
+```
+
 ## SLiM Code blocks
 
 In the `initialize()` block, I have:
@@ -85,6 +93,7 @@ don't use the fully formatted filename as above, but just `results_*` for
 brevity:
 
 ```
+> import slper.slimfile as sf
 > stats = sf.parse_slim_stats('results_stats.tsv')
 > stats.params
 {'seed': '1',
